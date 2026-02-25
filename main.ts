@@ -50,7 +50,10 @@ function responseHTML(html: string, init: ResponseInit = {}): Response {
 const patterns = projects.map((project) => {
   const name = project.rootPath.replace(/^go\.jcbhmr\.com\//, "");
   const pattern = new URLPattern({
-    pathname: `/${name}(/*)?`,
+    pathname:
+      project.subdirectory != null
+        ? `/${name}/${project.subdirectory}(/*)?`
+        : `/${name}(/*)?`,
   });
   return {
     pattern,
