@@ -55,10 +55,12 @@ const patterns = projects.map((project) => {
   return {
     pattern,
     fetch(request: Request): Response {
+      const url = new URL(request.url);
+      const docs = `https://pkg.go.dev/${url.hostname}${url.pathname}`;
       return responseHTML(
         metaGoImport(project)
-        + metaRedirect(project.repoURL)
-        + scriptRedirect(project.repoURL),
+        + metaRedirect(docs)
+        + scriptRedirect(docs),
       );
     }
   };
