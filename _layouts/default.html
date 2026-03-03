@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="0; url=https://pkg.go.dev/{{ page.root_path }}" />
+    <meta name="go-import" content="{{ page.root_path }} {{ page.vcs }} {{ page.repo_url }} {{ page.subdirectory | default: '' }}">
+    <meta name="robots" content="noindex" />
+    <title>Moved to https://pkg.go.dev/{{ page.root_path }}</title>
+    <script>
+      location.replace("https://pkg.go.dev/{{ page.root_path }}");
+    </script>
+  </head>
+  <body>
+    <p>
+      Moved to <a href="https://pkg.go.dev/{{ page.root_path }}">https://pkg.go.dev/{{ page.root_path }}</a>
+    </p>
+    {{ content }}
+  </body>
+</html>
