@@ -1,4 +1,4 @@
 ---
 layout: redirect
-redirect_url: https://github.com/jcbhmr?tab=repositories&q=&type=source&language=go&sort=
+redirect_url: https://pkg.go.dev/search?q=go.jcbhmr.com
 ---
